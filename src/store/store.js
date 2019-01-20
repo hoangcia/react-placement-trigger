@@ -1,4 +1,4 @@
-import { createStore, applyMiddleware, compose } from 'redux';
+import { createStore, applyMiddleware /*, compose*/ } from 'redux';
 import thunk from 'redux-thunk';
 import rootReducer from '../reducers/RootReducer';
 
@@ -9,6 +9,8 @@ export const configureStore = (initialState = {}) => {
    initialState,
     applyMiddleware(thunk)
   );
+  
+  /*Only for Development purpose - enable 'compose' method to use this Chrome extension*/
   
  /*
   const composeEnhancers =

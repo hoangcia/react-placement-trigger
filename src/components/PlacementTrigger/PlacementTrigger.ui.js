@@ -25,8 +25,15 @@ class PlacementTriggerUI extends Component {
     }
 
     handleClick(evt) {
-        
-        this.props.saveData({});
+        let savedData  = {};
+
+        let placementData = this.state.placementData;
+        savedData.device_platforms = this.state.selectedDevicePlatform === "all_platforms"? Object.keys(placementData.device_platforms.result):[this.state.selectedDevicePlatform];
+        savedData.publisher_platforms = Object.keys(placementData.publisher_platforms.result);
+        savedData.publisher_platforms.forEach(p => {
+            savedData[p] = placementData[p].user_selection.length === 0 ? placementData[p].default_selection:placementData[p].user_selection;
+        });
+        this.props.saveData(savedData);
     }
 
     onCheckListChange(position_key, position_items){
@@ -86,9 +93,8 @@ class PlacementTriggerUI extends Component {
     componentDidMount() {
 
     }
-    componentDidUpdate(){
-        console.log("placement trigger updated");
-        console.log(this.state);
+    componentDidUpdate(){        
+        
     }
     componentWillReceiveProps(nextProps) {
         //set default values for select elements
