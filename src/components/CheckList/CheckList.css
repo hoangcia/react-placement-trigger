@@ -1,0 +1,43 @@
+@import url("styledCheckbox.css");
+
+.check-list{
+    background-color:#efefef;    
+    border: 1px solid #bfbfbf;
+    max-width: 100%;    
+    min-width: 30%;
+}
+.check-list-header{
+    background-color:#9f9f9f;    
+    height: 30px;    
+}
+.check-list-title{
+    float: left;    
+    padding: 5px;
+}
+.check-list-title:before{
+    content:"|";
+    margin:10px;
+
+}
+.check-list-checkAll{
+    float:right;    
+}
+.check-list-item-left{
+    float: left;
+}
+.check-list-item-right{
+    float: right;
+}
+.check-list-container{
+    list-style-type: none;    
+    margin: 0;
+    padding:0;
+}
+.check-list-item{    
+    height: 30px;
+    padding-left:30px;
+    padding-top:5px
+}
+.check-list-item:hover{
+    background-color: #dedede;
+}

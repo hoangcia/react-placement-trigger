@@ -1,0 +1,158 @@
+{
+    "data": {
+        "traffic_types":{
+            "website": "Website",
+            "app": "App",
+            "messenger": "Messenger"
+        },
+        "creatives":[
+            {"label":"Image", "key":"image"},
+            {"label":"Video", "key":"video"},
+            {"label":"Carousel", "key":"carousel"},
+            {"label":"Slide Show", "key":"slideshow"},
+            {"label":"Collection", "key":"collection"}
+        ],
+        "objectives":[
+            {"label":"BRAND AWARENESS","key":"BRAND_AWARENESS"},
+            {"label":"REACH","key":"REACH"},
+            {"label":"LINK CLICKS","key":"LINK_CLICKS"},
+            {"label":"PAGE LIKES","key":"PAGE_LIKES"},
+            {"label":"APP INSTALLS","key":"APP_INSTALLS"},
+            {"label":"LEAD GENERATION","key":"LEAD_GENERATION"},
+            {"label":"VIDEO VIEWS","key":"VIDEO_VIEWS"},
+            {"label":"CONVERSIONS","key":"CONVERSIONS"},
+            {"label":"PRODUCT CATALOG SALES","key":"PRODUCT_CATALOG_SALES"},
+            {"label":"STORE VISITS","key":"STORE_VISITS"},
+            {"label":"MESSENGERS","key":"MESSENGERS"}            
+        ],
+        "device_platforms": {
+            "user_selection": [],
+            "result": {
+                "mobile": "Mobile Only",
+                "desktop": "Desktop Only"
+            }
+        },
+        "publisher_platforms": {
+            "user_selection": ["instagram_positions"],
+            "default_selection": [],
+            "result": {
+                "facebook_positions": "Facebook",
+                "instagram_positions": "Instagram",
+                "audience_network_positions": "Audience Network",
+                "messenger_positions": "Messenger"
+            }
+        },
+        "facebook_positions": {
+            "label": "Facebook",
+            "device": ["mobile","desktop"],
+            "user_selection": [],
+            "default_selection": [
+                "feed",
+                "instant_article",
+                "instream_video",
+                "right_hand_column",
+                "suggested_video",
+                "marketplace"
+            ],
+            "result": {
+                "feed" : {
+                    "label": "Feed",
+                    "device": ["mobile", "desktop"],
+                    "traffic": ["website","app","messenger"]
+                },
+                "instant_article" : {
+                    "label": "Instant Article",
+                    "device": ["mobile"],
+                    "traffic": ["website","app"]
+                },
+                "instream_video": {
+                    "label": "In-stream Video",
+                    "device": ["mobile", "desktop"],
+                    "traffic": []
+                },
+                "right_hand_column": {
+                    "label": "Right Column",
+                    "device": ["desktop"],
+                    "traffic": ["website"]
+                },
+                "suggested_video" :   {
+                    "label": "Suggested Video",
+                    "device": ["mobile"],
+                    "traffic": []
+                },
+                "marketplace" :   {
+                    "label": "Market Place",
+                    "device": ["mobile"],
+                    "traffic": []
+                }
+            }
+        },
+        "instagram_positions": {
+            "label": "Instagram",
+            "device": ["mobile"],
+            "user_selection": [],
+            "default_selection": [
+                "stream"
+            ],
+            "result": {
+                "stream": {
+                    "label": "Feed",
+                    "device": ["mobile"],
+                    "traffic": ["website","app","messenger"]
+                },
+                "story": {
+                    "label": "Story",
+                    "device": ["mobile"],
+                    "traffic": ["website","app"]
+                }
+            }
+        },
+        "audience_network_positions":{
+            "label": "Audience Network",
+            "device": ["mobile","desktop"],
+            "user_selection": [],
+            "default_selection": [
+                "classic",
+                "instream_video",
+                "rewarded_video"
+            ],
+            "result" : {
+                "classic" : {
+                    "label": "Native, Banner and Interstitial",
+                    "device": ["mobile"],
+                    "traffic": ["website","app"]
+                },
+                "instream_video" : {
+                    "label": "In-stream Videos",
+                    "device": ["mobile","desktop"],
+                    "traffic": ["website","app"]
+                },
+                "rewarded_video": {
+                    "label": "Rewarded Videos",
+                    "device": ["mobile"],
+                    "traffic": ["website","app"]
+                }
+            }
+        },
+        "messenger_positions": {
+            "label": "Messenger",
+            "device": ["mobile"],
+            "user_selection": [],
+            "default_selection": [
+                "messenger_home"
+            ],
+            "result": {
+                "messenger_home": {
+                    "label": "Home",
+                    "device": ["mobile"],
+                    "traffic": ["website","app","messenger"]
+                },
+                "sponsored_messages": {
+                    "label": "Sponsored Messages",
+                    "device": ["mobile"],
+                    "traffic": []
+                }
+            }
+        }
+    }
+}

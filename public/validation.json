@@ -1,0 +1,303 @@
+{
+    "validation":{
+        "BRAND_AWARENESS":{
+            "device_platforms": ["mobile","desktop"],
+            "creative": {
+                "facebook_positions": {
+                    "feed": ["image","carousel","video","slideshow"],
+                    "instant_article": ["image","carousel","video","slideshow"],
+                    "instream_video": ["video","slideshow"],
+                    "suggested_video": ["video","slideshow"]
+                },
+                "instagram_positions": {
+                    "stream": ["image","carousel","video","slideshow"],
+                    "story": ["image","video"]
+                },
+                "audience_network_positions": {
+                    "classic": ["image","carousel","video","slideshow"],
+                    "instream_video": ["video","slideshow"]
+                },
+                "messenger_positions": {
+                    "messenger_home": ["image","carousel"]
+                }
+            },
+            "required": {
+                "facebook_positions_instant_article" : ["facebook_positions_feed"],
+                "facebook_positions_instream_video": ["facebook_positions_feed"],
+                "facebook_positions_suggested_video": ["facebook_positions_feed"],
+                "audience_network_positions_classic": ["facebook_positions_feed","instagram_positions_stream"],
+                "audience_network_positions_instream_video": ["facebook_positions_feed","instagram_positions_stream"],
+                "messenger_positions_messenger_home": ["facebook_positions_feed"]
+            },
+            "no_required": ["instagram_positions_story"]
+        },
+        "REACH":{
+            "device_platforms": ["mobile","desktop"],
+            "creative": {
+                "facebook_positions": {
+                    "feed": ["image","carousel","video","slideshow"],
+                    "instant_article": ["image","carousel","video","slideshow"],
+                    "instream_video": ["video","slideshow"]
+                },
+                "instagram_positions": {
+                    "stream": ["image","carousel","video","slideshow"],
+                    "story": ["image","video"]
+                },
+                "audience_network_positions": {
+                    "classic": ["image","carousel","video","slideshow"],
+                    "instream_video": ["video","slideshow"]
+                },
+                "messenger_positions": {
+                    "messenger_home": ["image","carousel"]
+                }
+            },
+            "required": {
+                "facebook_positions_instant_article" : ["facebook_positions_feed"],
+                "facebook_positions_instream_video": ["facebook_positions_feed"],
+                "audience_network_positions_classic": ["facebook_positions_feed","instagram_positions_stream"],
+                "audience_network_positions_instream_video": ["facebook_positions_feed","instagram_positions_stream"],
+                "messenger_positions_messenger_home": ["facebook_positions_feed"]
+            },
+            "no_required": ["instagram_positions_story"]
+        },
+        "LINK_CLICKS":{
+            "device_platforms": {
+                "website": ["mobile","desktop"],
+                "app": ["mobile"],
+                "messenger": ["mobile","desktop"]
+            },
+            "creative": {
+                "facebook_positions": {
+                    "feed": ["image","carousel","video","slideshow"],
+                    "instant_article": ["image","carousel","video","slideshow"],
+                    "right_hand_column": ["image","carousel","video","slideshow"],
+                    "marketplace": ["image","carousel"]
+                },
+                "instagram_positions": {
+                    "stream": ["image","carousel","video","slideshow","collection"],
+                    "story": ["image","video"]
+                },
+                "audience_network_positions": {
+                    "classic": ["image","carousel","video","slideshow"]
+                },
+                "messenger_positions": {
+                    "messenger_home": ["image","carousel"]
+                }
+            },
+            "required": {
+                "facebook_positions_instant_article" : ["facebook_positions_feed"],
+                "facebook_positions_marketplace": ["facebook_positions_feed"],
+                "audience_network_positions_classic": ["facebook_positions_feed"],
+                "messenger_positions_messenger_home": ["facebook_positions_feed"]
+            },
+            "no_required": ["instagram_positions_story"]
+        },
+        "POST_ENGAGEMENT":{
+            "device_platforms": ["mobile","desktop"],
+            "creative": {
+                "facebook_positions": {
+                    "feed": ["image","video","slideshow"],
+                    "instant_article": ["image","video","slideshow"],
+                    "instream_video": ["video","slideshow"],
+                    "suggested_video": ["video","slideshow"]
+                },
+                "instagram_positions": {
+                    "stream": ["image","carousel","video","slideshow"]
+                },
+                "audience_network_positions": {
+                    "instream_video": ["video","slideshow"]
+                },
+                "required": {
+                    "facebook_positions_instant_article" : ["facebook_positions_feed"],
+                    "facebook_positions_instream_video": ["facebook_positions_feed"],
+                    "facebook_positions_suggested_video": ["facebook_positions_feed"],
+                    "audience_network_positions_instream_video": ["facebook_positions_feed","instagram_positions_stream"]
+                },
+                "no_required": ["instagram_positions_story"]
+            }
+        },
+        "PAGE_LIKES":{
+            "device_platforms": ["mobile","desktop"],
+            "creative": {
+                "facebook_positions": {
+                    "feed": ["image","video","slideshow"]
+                }
+            },
+            "required": {},
+            "no_required": []
+        },
+        "EVENT_RESPONSES":{
+            "device_platforms": ["mobile","desktop"],
+            "creative": {
+                "facebook_positions": {
+                    "feed": ["image","video","slideshow"]
+                }
+            },
+            "required": {},
+            "no_required": []
+
+        },
+        "APP_INSTALLS":{
+            "device_platforms": ["mobile"],
+            "creative": {
+                "facebook_positions": {
+                    "feed": ["image","carousel","video","slideshow"],
+                    "instant_article": ["image","carousel","video","slideshow"],
+                    "suggested_video": ["video","slideshow"]
+                },
+                "instagram_positions": {
+                    "stream": ["image","carousel","video","slideshow"],
+                    "story": ["image","video"]
+                },
+                "audience_network_positions": {
+                    "classic": ["image","carousel","video","slideshow"],
+                    "rewarded_video": ["video","slideshow"]
+                },
+                "messenger_positions": {
+                    "messenger_home": ["image","carousel"]
+                }
+            },
+            "required": {
+                "facebook_positions_instant_article" : ["facebook_positions_feed"],
+                "facebook_positions_suggested_video": ["facebook_positions_feed"],
+                "audience_network_positions_classic": ["facebook_positions_feed"],
+                "audience_network_positions_rewarded_video": ["facebook_positions_feed"],
+                "messenger_positions_messenger_home": ["facebook_positions_feed"]
+            },
+            "no_required": ["instagram_positions_story"]
+        },
+        "LEAD_GENERATION":{
+            "device_platforms": ["mobile","desktop"],
+            "creative": {
+                "facebook_positions": {
+                    "feed": ["image","carousel","video","slideshow"],
+                    "instant_article": ["image","carousel","video","slideshow"]
+                },
+                "instagram_positions": {
+                    "stream": ["image","carousel","video","slideshow"],
+                    "story": ["image","video"]
+                }
+            },
+            "required": {
+                "facebook_positions_instant_article" : ["facebook_positions_feed"]
+            },
+            "no_required": ["instagram_positions_story"]
+        },
+        "VIDEO_VIEWS":{
+            "device_platforms": ["mobile","desktop"],
+            "creative": {
+                "facebook_positions": {
+                    "feed": ["video","slideshow"],
+                    "instant_article": ["video","slideshow"],
+                    "instream_video": ["video","slideshow"],
+                    "suggested_video": ["video","slideshow"]
+                },
+                "instagram_positions": {
+                    "stream": ["video","slideshow"],
+                    "story": ["video"]
+                },
+                "audience_network_positions": {
+                    "classic": ["video","slideshow"],
+                    "instream_video": ["video","slideshow"]
+                }
+            },
+            "required": {
+                "facebook_positions_instant_article" : ["facebook_positions_feed"],
+                "facebook_positions_instream_video": ["facebook_positions_feed"],
+                "facebook_positions_suggested_video": ["facebook_positions_feed"],
+                "audience_network_positions_classic": ["facebook_positions_feed","instagram_positions_stream"],
+                "audience_network_positions_rewarded_video": ["facebook_positions_feed","instagram_positions_stream"]
+            },
+            "no_required": ["instagram_positions_story"]
+        },
+        "CONVERSIONS":{
+            "device_platforms": {
+                "website": ["mobile","desktop"],
+                "app": ["mobile"],
+                "messenger": ["mobile","desktop"]
+            },
+            "creative": {
+                "facebook_positions": {
+                    "feed": ["image","carousel","video","slideshow","collection"],
+                    "instant_article": ["image","carousel","video","slideshow"],
+                    "right_hand_column": ["image","carousel","video","slideshow"],
+                    "marketplace": ["image","carousel"]
+                },
+                "instagram_positions": {
+                    "stream": ["image","carousel","video","slideshow","collection"],
+                    "story": ["image","video"]
+                },
+                "audience_network_positions": {
+                    "classic": ["image","carousel","video","slideshow"],
+                    "instream_video": ["video","slideshow"],
+                    "rewarded_video": ["video","slideshow"]
+                },
+                "messenger_positions": {
+                    "messenger_home": ["image","carousel"]
+                }
+            },
+            "required": {
+                "facebook_positions_instant_article" : ["facebook_positions_feed"],
+                "facebook_positions_marketplace": ["facebook_positions_feed"],
+                "audience_network_positions_classic": ["facebook_positions_feed"],
+                "audience_network_positions_instream_video": ["facebook_positions_feed"],
+                "audience_network_positions_rewarded_video": ["facebook_positions_feed"],
+                "messenger_positions_messenger_home": ["facebook_positions_feed"]
+            },
+            "no_required": ["instagram_positions_story"]
+        },
+        "PRODUCT_CATALOG_SALES":{
+            "device_platforms": ["mobile","desktop"],
+            "creative": {
+                "facebook_positions": {
+                    "feed": ["image","carousel","collection"],
+                    "right_hand_column": ["image","carousel"],
+                    "marketplace": ["image","carousel"]
+                },
+                "instagram_positions": {
+                    "stream": ["image","carousel","collection"]
+                },
+                "audience_network_positions": {
+                    "classic": ["image","carousel"]
+                }
+            },
+            "required": {
+                "facebook_positions_marketplace": ["facebook_positions_feed"],
+                "audience_network_positions_classic": ["facebook_positions_feed"]
+            },
+            "no_required": []
+        },
+        "STORE_VISITS":{
+            "device_platforms": ["mobile","desktop"],
+            "creative": {
+                "facebook_positions": {
+                    "feed": ["image","carousel","video","slideshow","collection"]
+                },
+                "instagram_positions": {
+                    "stream": ["image","carousel","video","slideshow","collection"]
+                }
+            },
+            "required": {},
+            "no_required": []
+        },
+        "MESSENGERS":{
+            "device_platforms": ["mobile"],
+            "creative": {
+                "facebook_positions": {
+                    "feed": ["image","carousel","video","slideshow"]
+                },
+                "instagram_positions": {
+                    "stream": ["image","carousel","video","slideshow"]
+                },
+                "messenger_positions": {
+                    "messenger_home": ["image","carousel"],
+                    "sponsored_messages": ["image"]
+                }
+            },
+            "required": {
+                "messenger_positions_messenger_home": ["facebook_positions_feed"]
+            },
+            "no_required": ["messenger_positions_sponsored_messages"]
+        }
+    }
+}

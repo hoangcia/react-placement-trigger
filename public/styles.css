@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+*{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 10pt;
+}
+html{
+    height:100%;    
+    background: linear-gradient(180deg, #ffffff 0%,#f2f8fc 100%);
+    color:#4f4f4f;
+}
+body{
+  padding: 10px;
+}
+button{
+  border-radius: 3px;
+  border: solid 1px #bbb;
+  padding:5px 10px;
+  background-color: #fefefe;
+}
+button:hover{
+  background-color: #a6c7ff;
+  cursor:pointer;
+}
+select{
+  border-radius: 3px;
+  padding: 3px;
+  background-color: #efefef;
+}

@@ -1,0 +1,25 @@
+.placement-trigger{
+    padding: 10px;
+}
+.publisher-container{
+    background-color: #efefef;
+    padding: 10px;
+}
+.creatives-container{
+    padding: 10px;
+}
+.objectives-container{
+    padding: 10px;
+}
+.traffic-types-container{
+    padding: 10px;
+}
+.device-platforms-select{
+    padding: 10px;
+}
+.float-left{
+    float:left;
+}
+.float-right{
+    float:right;
+}

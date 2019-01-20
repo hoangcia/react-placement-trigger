@@ -1,0 +1,9 @@
+.alert-box{
+    padding: 5px;
+    background-color: #f3cd94; 
+    border: 1px solid #ff9800;
+    border-radius: 5px;
+}
+.alert-box-content{
+    color: white;
+}
