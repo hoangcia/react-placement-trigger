@@ -53,43 +53,15 @@ class PlacementTrigger extends Component {
     }
 
     saveData(data) {
-
+        console.log(data);
     }
 
-    validate(userSelections) {
-
-    }
-    
-    onChange(checkListData) {
-        //validation
+    validate(checkListData) {
         let validationMsgs = [];
-        let validation_rules = this.state.validation[checkListData.selectedObjective];
-        let creative_rules = validation_rules.creative[checkListData.position.key];
-        let device_platform_rules = validation_rules.device_platforms;
-        let required_rules = validation_rules.required;
-        let no_required_rules = validation_rules.no_required;
-
-        //save user_selection
+        let validation_rules = this.state.validation[checkListData.selectedObjective];                
+        let required_rules = validation_rules.required;        
         let placementData = this.state.placementData;
-
-        let user_selection = placementData[checkListData.position.key].user_selection;
         
-        if(user_selection.length === 0) user_selection = placementData[checkListData.position.key].default_selection;
-
-        console.log(checkListData);
-        checkListData.position.items.forEach((pItem)=>{
-            if(pItem.checked){
-                user_selection.push(pItem.key);
-            }
-            else{
-                let foundIndex = user_selection.indexOf(pItem.key);
-                if(foundIndex>-1)
-                    user_selection.splice(foundIndex,1);
-            }
-        });
-        user_selection = [...new Set(user_selection)];
-        placementData[checkListData.position.key].user_selection = user_selection;
-
         /* validation - require rules*/
         let requiredPositions = parseObjToArray(required_rules);
         let publisher_platforms = parseObjToArray(placementData.publisher_platforms.result);
@@ -118,6 +90,32 @@ class PlacementTrigger extends Component {
                 }
             });
         });
+        return validationMsgs;
+    }
+    
+    onChange(checkListData) {                
+        //save user_selection
+        let placementData = this.state.placementData;
+
+        let user_selection = placementData[checkListData.position.key].user_selection;
+        
+        if(user_selection.length === 0) user_selection = placementData[checkListData.position.key].default_selection;
+        
+        checkListData.position.items.forEach((pItem)=>{
+            if(pItem.checked){
+                user_selection.push(pItem.key);
+            }
+            else{
+                let foundIndex = user_selection.indexOf(pItem.key);
+                if(foundIndex>-1)
+                    user_selection.splice(foundIndex,1);
+            }
+        });
+        user_selection = [...new Set(user_selection)];
+        placementData[checkListData.position.key].user_selection = user_selection;
+        //validate
+        let validationMsgs = this.validate(checkListData);
+
         this.setState({validationMsgs,placementData});
     }
     render() {

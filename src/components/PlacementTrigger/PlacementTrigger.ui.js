@@ -25,7 +25,8 @@ class PlacementTriggerUI extends Component {
     }
 
     handleClick(evt) {
-        console.log("Save placement data!");
+        
+        this.props.saveData({});
     }
 
     onCheckListChange(position_key, position_items){
